@@ -9,24 +9,28 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
       - name: Install dependencies
         run: npm ci
-        working-directory: Robotic Book
+        working-directory: ./Robotic Book
 
       - name: Build website
         run: npm run build
-        working-directory: Robotic Book
+        working-directory: ./Robotic Book
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./Robotic Book/build
-          # Set publish_branch to gh-pages for deploying to github.io
+          publish_branch: gh-pages
