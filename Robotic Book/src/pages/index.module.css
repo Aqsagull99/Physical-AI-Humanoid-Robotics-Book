@@ -1,0 +1,64 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #000000 0%, #111111 100%);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.contentPreview {
+  padding: 4rem 0;
+  background-color: #000000;
+}
+
+.previewCard {
+  background-color: #111111;
+  padding: 2rem;
+  border-radius: 8px;
+  height: 100%;
+  border: 1px solid #333333;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.previewCard:hover {
+  transform: translateY(-5px);
+  border-color: #3b82f6;
+}
+
+.previewCard h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.previewCard p {
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 996px) {
+  .contentPreview {
+    padding: 2rem 0;
+  }
+
+  .previewCard {
+    margin-bottom: 1.5rem;
+  }
+}

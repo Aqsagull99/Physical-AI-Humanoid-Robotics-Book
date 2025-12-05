@@ -1,0 +1,133 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Black background and white text theme */
+:root {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-background-color: #000000;
+  --ifm-background-surface-color: #000000;
+  --ifm-text-color: #ffffff;
+  --ifm-text-color-base: #ffffff;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  --ifm-font-color-base: #ffffff;
+  --ifm-menu-color: #ffffff;
+  --ifm-menu-color-active: #3b82f6;
+  --ifm-menu-color-background-active: rgba(0, 0, 0, 0.2);
+  --ifm-footer-color: #ffffff;
+  --ifm-footer-background-color: #000000;
+  --ifm-navbar-background-color: #000000;
+  --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  --ifm-toc-border-color: #ffffff;
+  --ifm-global-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode (which will now be the default) */
+[data-theme='dark'] {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-background-color: #000000;
+  --ifm-background-surface-color: #000000;
+  --ifm-text-color: #ffffff;
+  --ifm-text-color-base: #ffffff;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  --ifm-font-color-base: #ffffff;
+  --ifm-menu-color: #ffffff;
+  --ifm-menu-color-active: #3b82f6;
+  --ifm-menu-color-background-active: rgba(0, 0, 0, 0.2);
+  --ifm-footer-color: #ffffff;
+  --ifm-footer-background-color: #000000;
+  --ifm-navbar-background-color: #000000;
+  --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  --ifm-toc-border-color: #ffffff;
+  --ifm-global-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Light mode - also with black background and white text for consistency */
+[data-theme='light'] {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-background-color: #000000;
+  --ifm-background-surface-color: #000000;
+  --ifm-text-color: #ffffff;
+  --ifm-text-color-base: #ffffff;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  --ifm-font-color-base: #ffffff;
+  --ifm-menu-color: #ffffff;
+  --ifm-menu-color-active: #3b82f6;
+  --ifm-menu-color-background-active: rgba(0, 0, 0, 0.2);
+  --ifm-footer-color: #ffffff;
+  --ifm-footer-background-color: #000000;
+  --ifm-navbar-background-color: #000000;
+  --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  --ifm-toc-border-color: #ffffff;
+  --ifm-global-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Additional global styles for black background and white text */
+body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html {
+  background-color: #000000 !important;
+}
+
+.main-wrapper {
+  background-color: #000000;
+}
+
+.container {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.navbar {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Ensure all text elements are white */
+h1, h2, h3, h4, h5, h6, p, span, div, a, li, td, th {
+  color: #ffffff !important;
+}
+
+/* Style for code blocks */
+.code-block {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+/* Style for links */
+a {
+  color: #3b82f6 !important;
+}
+
+a:hover {
+  color: #60a5fa !important;
+}

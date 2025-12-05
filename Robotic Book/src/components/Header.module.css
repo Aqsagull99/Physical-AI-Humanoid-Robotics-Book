@@ -1,0 +1,25 @@
+.header {
+  background-color: #000000;
+  color: #ffffff;
+  border-bottom: 1px solid #333333;
+  transition: transform 0.3s ease;
+}
+
+.header a {
+  color: #ffffff;
+}
+
+.headerHideable {
+  top: 0;
+  transition: transform 0.3s ease;
+}
+
+.headerHidden {
+  transform: translate3d(0, calc(-100% - 2px), 0);
+}
+
+@media (max-width: 996px) {
+  .header {
+    padding: 0.5rem;
+  }
+}
