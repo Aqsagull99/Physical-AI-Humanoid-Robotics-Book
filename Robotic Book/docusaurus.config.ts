@@ -15,15 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://physical-ai-book.github.io',
+  url: 'https://aqsagull99.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/Physical-AI-Humanoid-Robotics-Book/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'physical-ai-book', // Usually your GitHub org/user name.
-  projectName: 'physical-ai-humanoid-robotics', // Usually your repo name.
+  organizationName: 'Aqsagull99', // Usually your GitHub org/user name.
+  projectName: 'Physical-AI-Humanoid-Robotics-Book', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
