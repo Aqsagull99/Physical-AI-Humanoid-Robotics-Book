@@ -94,3 +94,5 @@ export default function Footer(): ReactNode {
     </footer>
   );
 }
+
+

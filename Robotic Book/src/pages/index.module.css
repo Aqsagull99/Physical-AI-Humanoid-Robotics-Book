@@ -8,7 +8,8 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #000000 0%, #111111 100%);
+  background: #ffffff;
+  color: #000000;
 }
 
 @media screen and (max-width: 996px) {
@@ -24,18 +25,42 @@
   margin-top: 2rem;
 }
 
+/* Professional academic button styling */
+.button--secondary {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 1rem 2rem !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+}
+
+.button--secondary:hover {
+  background-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  text-decoration: none !important;
+}
+
 .contentPreview {
   padding: 4rem 0;
-  background-color: #000000;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .previewCard {
-  background-color: #111111;
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 8px;
   height: 100%;
-  border: 1px solid #333333;
+  border: 1px solid #e5e7eb;
   transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .previewCard:hover {
@@ -44,12 +69,12 @@
 }
 
 .previewCard h3 {
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 1rem;
 }
 
 .previewCard p {
-  color: #cccccc;
+  color: #000000;
   line-height: 1.6;
 }
 
