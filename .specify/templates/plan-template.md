@@ -31,7 +31,10 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] **Accuracy**: Are all claims verifiable against primary or reliable sources?
+- [ ] **Clarity**: Is the proposed solution clear and understandable for the target audience?
+- [ ] **Reproducibility**: Does the plan ensure that all claims are traceable to their source?
+- [ ] **Rigor**: Does the plan prioritize peer-reviewed articles, official documentation, or authoritative publications?
 
 ## Project Structure
 

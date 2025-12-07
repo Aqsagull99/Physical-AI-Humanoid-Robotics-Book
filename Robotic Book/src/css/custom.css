@@ -4,7 +4,7 @@
  * work well for content-centric websites.
  */
 
-/* Black background and white text theme */
+/* New theme with white background and color hierarchy */
 :root {
   --ifm-color-primary: #2563eb;
   --ifm-color-primary-dark: #1d4ed8;
@@ -13,25 +13,28 @@
   --ifm-color-primary-light: #3b82f6;
   --ifm-color-primary-lighter: #60a5fa;
   --ifm-color-primary-lightest: #93c5fd;
-  --ifm-background-color: #000000;
-  --ifm-background-surface-color: #000000;
-  --ifm-text-color: #ffffff;
-  --ifm-text-color-base: #ffffff;
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-text-color: #000000;
+  --ifm-text-color-base: #000000;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
-  --ifm-font-color-base: #ffffff;
-  --ifm-menu-color: #ffffff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-color-base: #000000;
+  --ifm-menu-color: #000000;
   --ifm-menu-color-active: #3b82f6;
-  --ifm-menu-color-background-active: rgba(0, 0, 0, 0.2);
+  --ifm-menu-color-background-active: rgba(255, 255, 255, 0.2);
   --ifm-footer-color: #ffffff;
   --ifm-footer-background-color: #000000;
-  --ifm-navbar-background-color: #000000;
-  --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
-  --ifm-toc-border-color: #ffffff;
-  --ifm-global-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.1);
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  --ifm-toc-border-color: #000000;
+  --ifm-global-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  /* Custom color hierarchy */
+  --ifm-color-dark-green: #16a34a; /* emerald-600 */
+  --ifm-color-dark-pink: #db2777;  /* pink-600 */
 }
 
-/* Dark mode (which will now be the default) */
+/* Dark mode */
 [data-theme='dark'] {
   --ifm-color-primary: #2563eb;
   --ifm-color-primary-dark: #1d4ed8;
@@ -40,24 +43,27 @@
   --ifm-color-primary-light: #3b82f6;
   --ifm-color-primary-lighter: #60a5fa;
   --ifm-color-primary-lightest: #93c5fd;
-  --ifm-background-color: #000000;
-  --ifm-background-surface-color: #000000;
-  --ifm-text-color: #ffffff;
-  --ifm-text-color-base: #ffffff;
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
-  --ifm-font-color-base: #ffffff;
-  --ifm-menu-color: #ffffff;
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-text-color: #000000;
+  --ifm-text-color-base: #000000;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-color-base: #000000;
+  --ifm-menu-color: #000000;
   --ifm-menu-color-active: #3b82f6;
-  --ifm-menu-color-background-active: rgba(0, 0, 0, 0.2);
+  --ifm-menu-color-background-active: rgba(255, 255, 255, 0.2);
   --ifm-footer-color: #ffffff;
   --ifm-footer-background-color: #000000;
-  --ifm-navbar-background-color: #000000;
-  --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
-  --ifm-toc-border-color: #ffffff;
-  --ifm-global-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.1);
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  --ifm-toc-border-color: #000000;
+  --ifm-global-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  /* Custom color hierarchy */
+  --ifm-color-dark-green: #16a34a; /* emerald-600 */
+  --ifm-color-dark-pink: #db2777;  /* pink-600 */
 }
 
-/* Light mode - also with black background and white text for consistency */
+/* Light mode */
 [data-theme='light'] {
   --ifm-color-primary: #2563eb;
   --ifm-color-primary-dark: #1d4ed8;
@@ -66,45 +72,48 @@
   --ifm-color-primary-light: #3b82f6;
   --ifm-color-primary-lighter: #60a5fa;
   --ifm-color-primary-lightest: #93c5fd;
-  --ifm-background-color: #000000;
-  --ifm-background-surface-color: #000000;
-  --ifm-text-color: #ffffff;
-  --ifm-text-color-base: #ffffff;
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
-  --ifm-font-color-base: #ffffff;
-  --ifm-menu-color: #ffffff;
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-text-color: #000000;
+  --ifm-text-color-base: #000000;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-color-base: #000000;
+  --ifm-menu-color: #000000;
   --ifm-menu-color-active: #3b82f6;
-  --ifm-menu-color-background-active: rgba(0, 0, 0, 0.2);
+  --ifm-menu-color-background-active: rgba(255, 255, 255, 0.2);
   --ifm-footer-color: #ffffff;
   --ifm-footer-background-color: #000000;
-  --ifm-navbar-background-color: #000000;
-  --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
-  --ifm-toc-border-color: #ffffff;
-  --ifm-global-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.1);
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  --ifm-toc-border-color: #000000;
+  --ifm-global-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  /* Custom color hierarchy */
+  --ifm-color-dark-green: #16a34a; /* emerald-600 */
+  --ifm-color-dark-pink: #db2777;  /* pink-600 */
 }
 
-/* Additional global styles for black background and white text */
+/* Additional global styles for white background and color hierarchy */
 body {
-  background-color: #000000 !important;
-  color: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
 }
 
 html {
-  background-color: #000000 !important;
+  background-color: #ffffff !important;
 }
 
 .main-wrapper {
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 .container {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .navbar {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .footer {
@@ -112,15 +121,30 @@ html {
   color: #ffffff;
 }
 
-/* Ensure all text elements are white */
-h1, h2, h3, h4, h5, h6, p, span, div, a, li, td, th {
-  color: #ffffff !important;
+/* Color hierarchy for headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #000000 !important;
+}
+
+/* Secondary headings in dark green */
+h2 {
+  color: var(--ifm-color-dark-green) !important;
+}
+
+/* Small headings/highlights in dark pink */
+h3, h4, h5, h6 {
+  color: var(--ifm-color-dark-pink) !important;
+}
+
+/* Body text in black */
+p, span, div, li, td, th {
+  color: #000000 !important;
 }
 
 /* Style for code blocks */
 .code-block {
-  background-color: #1a1a1a !important;
-  color: #ffffff !important;
+  background-color: #f5f5f5 !important;
+  color: #000000 !important;
 }
 
 /* Style for links */

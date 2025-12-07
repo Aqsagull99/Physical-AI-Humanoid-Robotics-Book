@@ -1,15 +1,17 @@
 .contentPreview {
   padding: 4rem 0;
-  background-color: #000000;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .previewCard {
-  background-color: #111111;
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 8px;
   height: 100%;
-  border: 1px solid #333333;
+  border: 1px solid #e5e7eb;
   transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .previewCard:hover {
@@ -18,12 +20,12 @@
 }
 
 .cardTitle {
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 1rem;
 }
 
 .cardDescription {
-  color: #cccccc;
+  color: #000000;
   line-height: 1.6;
 }
 
