@@ -20,14 +20,43 @@ jobs:
           node-version: 20
           cache: npm
 
+      - name: Find and display directory structure
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Directory listing:"
+          ls -la
+          echo "Looking for project directory:"
+          find . -type d -name "Robotic Book" -maxdepth 2
+
       - name: Install dependencies
         run: |
-          cd "Robotic Book"
+          # Look for the Robotic Book directory at different levels
+          if [ -d "Robotic Book" ]; then
+            cd "Robotic Book"
+          elif [ -d "./Robotic Book" ]; then
+            cd "./Robotic Book"
+          else
+            echo "Error: Could not find Robotic Book directory"
+            ls -la
+            exit 1
+          fi
+          echo "Current directory: $(pwd)"
+          ls -la
           npm ci
 
       - name: Build website
         run: |
-          cd "Robotic Book"
+          # Look for the Robotic Book directory at different levels
+          if [ -d "Robotic Book" ]; then
+            cd "Robotic Book"
+          elif [ -d "./Robotic Book" ]; then
+            cd "./Robotic Book"
+          else
+            echo "Error: Could not find Robotic Book directory"
+            ls -la
+            exit 1
+          fi
           npm run build
 
       - name: Deploy to GitHub Pages
