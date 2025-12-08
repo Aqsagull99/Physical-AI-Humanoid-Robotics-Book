@@ -85,9 +85,9 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'physicalAISidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Textbook',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/about', label: 'About', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
@@ -96,13 +96,13 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'dark', // Keep dark for contrast with the new white theme
       links: [
         {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Textbook',
               to: '/docs/intro',
             },
           ],
@@ -128,8 +128,8 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'About',
+              to: '/about',
             },
             {
               label: 'GitHub',

@@ -10,7 +10,7 @@
 }
 
 .footerTitle {
-  color: #ffffff;
+  color: #16a34a; /* dark green */
   font-size: 1.1rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -32,13 +32,13 @@
 }
 
 .footerLink {
-  color: #cccccc !important;
+  color: #ffffff !important;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .footerLink:hover {
-  color: #3b82f6 !important;
+  color: #93c5fd !important;
   text-decoration: none;
 }
 

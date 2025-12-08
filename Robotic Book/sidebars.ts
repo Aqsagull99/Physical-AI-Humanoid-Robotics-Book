@@ -26,22 +26,45 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Module 1: The Robotic Nervous System (ROS 2)',
-      items: ['ros2'],
+      items: [
+        'ros2/chapter-1-middleware',
+        'ros2/chapter-2-nodes-topics-services',
+        'ros2/chapter-3-rclpy-bridge',
+        'ros2/chapter-4-urdf-humanoids'
+      ],
     },
     {
       type: 'category',
       label: 'Module 2: The Digital Twin (Gazebo & Unity)',
-      items: ['digital-twin'],
+      items: [
+        'digital-twin/chapter-1-introduction',
+        'digital-twin/chapter-2-physics-simulation',
+        'digital-twin/chapter-3-environment-modeling',
+        'digital-twin/chapter-4-unity-simulation',
+        'digital-twin/chapter-5-sensor-simulation'
+      ],
     },
     {
       type: 'category',
       label: 'Module 3: AI-Robot Brain (NVIDIA Isaac)',
-      items: ['ai-robot-brain'],
+      items: [
+        'ai-robot-brain/chapter-1-ai-role',
+        'ai-robot-brain/chapter-2-isaac-sim',
+        'ai-robot-brain/chapter-3-synthetic-data',
+        'ai-robot-brain/chapter-4-isaac-ros',
+        'ai-robot-brain/chapter-5-navigation-nav2'
+      ],
     },
     {
       type: 'category',
-      label: 'Module 4: Vision-Language-Action (VLA) and Capstone',
-      items: ['vla-capstone'],
+      label: 'Module 4: Vision-Language-Action (VLA)',
+      items: [
+        'vla/chapter-1-language-to-action',
+        'vla/chapter-2-voice-to-action',
+        'vla/chapter-3-cognitive-planning',
+        'vla/chapter-4-vision-language-grounding',
+        'vla/chapter-5-capstone-project'
+      ],
     },
     {
       type: 'category',

@@ -1,55 +1,191 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: 1.0.0 → 2.0.0
+- List of modified principles:
+  - Accuracy → Accuracy (updated)
+  - Clarity → Clarity (updated)
+  - Reproducibility → Reproducibility (updated)
+  - Rigor → Rigor (updated)
+  - Added: Grounding & Non-hallucination
+  - Added: Privacy & Minimal Data Retention
+- Added sections: Projects, RAG Chatbot Standards, Constraints, Success Criteria, Deliverables, Testing & Validation, Operational Requirements, Additional Instructions for AI/Authoring Agents
+- Removed sections: None
+- Templates requiring updates:
+  - ✅ .specify/templates/plan-template.md
+  - ✅ .specify/templates/spec-template.md
+  - ✅ .specify/templates/tasks-template.md
+- Follow-up TODOs: None
+-->
+# Constitution for AI/Spec-Driven Book Creation + Integrated RAG Chatbot Projects
+
+## Projects
+
+### 1. AI/Spec-Driven Book Creation
+- Write a book using Docusaurus and deploy it to GitHub Pages.
+- Authoring workflow uses Spec-Kit Plus (https://github.com/panaversity/spec-kit-plus/) and Claude Code (https://www.claude.com/product/claude-code).
+
+### 2. Integrated RAG Chatbot Development
+- Build and embed a Retrieval-Augmented Generation (RAG) chatbot within the published book site.
+- Chatbot must answer questions about the book's content.
+- Chatbot must support answering based *only* on text the user selects/highlights.
+
+---
 
 ## Core Principles
+- **Accuracy:** All information must be verified using primary or highly reliable sources.
+- **Clarity:** Writing and chatbot responses must be clear and suitable for a computer science audience.
+- **Reproducibility:** Every claim must be traceable to its source; include links/citations.
+- **Rigor:** Prefer peer-reviewed articles, official documentation, or authoritative publications.
+- **Grounding & Non-hallucination:** Chatbot responses must be strictly grounded in retrieved materials; hallucinations are unacceptable.
+- **Privacy & Minimal Data Retention:** User data is never stored beyond session needs and explicit consent.
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+---
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+## Key Standards
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Book (Project 1)
+- All factual claims must be traceable to sources.
+- Citation format: APA style.
+- Source types: Minimum 50% peer-reviewed articles.
+- Plagiarism: 0% tolerance; all content must be original or properly cited.
+- Writing clarity: Flesch–Kincaid grade 10–12 readability.
+- Language: Professional, academic tone suitable for technical readers.
+- Word count: 5,000–7,000 words.
+- Minimum 15 sources.
+- Output formats:
+  - Docusaurus-compatible Markdown (primary)
+  - PDF export with embedded citations
+- Deployment:
+  - Docusaurus site deployable to GitHub Pages
+  - Repository structure and CI/CD notes included
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+---
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### RAG Chatbot (Project 2)
 
-### [PRINCIPLE_6_NAME]
+#### Functional Requirements
+- Must follow strict Retrieval-Augmented Generation (RAG) rules.
+- Answers must be derived *only* from retrieved book content.
+- Must support **selection-only mode**, where answers are based solely on user-highlighted text.
 
+#### Approved Tech Stack
+- **Backend:** FastAPI
+- **LLM / Embeddings Provider:** OpenAI *or* Cohere
+- **Vector Store:** Qdrant Cloud (Free Tier)
+- **Metadata Store:**
+  - Neon Serverless Postgres (preferred), or
+  - Qdrant payload metadata when Neon is omitted
+- **Frontend:** Embedded chatbot UI in Docusaurus (React)
 
-[PRINCIPLE__DESCRIPTION]
+#### Embedding & Retrieval
+- Produce embeddings for all book content.
+- Supported models (example):
+  - Cohere Embed models *or*
+  - OpenAI Embedding models
+- Retrieval must support:
+  - Whole-book semantic search
+  - User-selected text–restricted retrieval
+- When selection mode is active, no external or unrelated chunks may be used.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+#### Response Grounding
+- Every chatbot answer must include:
+  - Source ID(s)
+  - Highlighted excerpt(s) or page/paragraph pointer
+  - Optional APA citation when relevant
+- If an answer cannot be found, the chatbot must respond with:
+  > "I couldn't find a passage that directly answers this. Here are the closest related sources…"
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+#### Performance & Reliability
+- Reasonable latency suitable for interactive web usage.
+- Top-K retrieval and caching strategy documented.
+- Embedding model name and version stored in metadata for reproducibility.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+#### Security & Privacy
+- API keys and secrets must not be committed to the repository.
+- All communication must use TLS.
+- No persistent storage of user queries or PII without explicit consent.
+- A privacy notice must be displayed in the UI.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+---
+
+## Constraints
+- Content consistency between the book and chatbot is mandatory.
+- Only approved book sources may be used for embeddings.
+- Chatbot must not hallucinate or infer beyond retrieved text.
+- Code must be production-ready, typed, validated, and documented.
+- Hosting:
+  - Frontend: GitHub Pages
+  - Backend & databases: cloud-hosted with deployment guide provided
+
+---
+
+## Success Criteria
+
+### Book
+- All claims verified and cited using APA style.
+- Zero plagiarism.
+- Docusaurus site fully deployable and publicly accessible.
+- Professionally designed UI (homepage, header/footer, CTA).
+- Ready-for-publication quality.
+
+### Chatbot
+- ≥ 95% of sampled responses correctly grounded in retrieved passages.
+- Selection-only queries strictly limited to highlighted text.
+- Fully embedded chatbot UI (desktop + mobile).
+- End-to-end pipeline validated:
+  - Ingestion → embedding → Qdrant → retrieval → LLM → cited response
+- Logs demonstrate retrieval provenance for auditability.
+
+---
+
+## Deliverables
+- Live Docusaurus site (GitHub Pages URL).
+- PDF export with APA citations.
+- FastAPI RAG service (ingestion + query endpoints).
+- Qdrant collection with embeddings and ingestion scripts.
+- Neon Postgres schema (if used) and deployment documentation.
+- Chatbot UI embedded in Docusaurus with selection-to-chat flow.
+- Architecture diagram, deployment guide, and validation reports.
+
+---
+
+## Testing & Validation
+- Book:
+  - Citation completeness
+  - Plagiarism scan
+  - Readability analysis
+- Chatbot:
+  - Grounding accuracy tests
+  - Precision@K / Recall@K retrieval metrics
+  - Selection-only mode tests
+  - Load and latency testing
+  - Security and privacy audit
+
+---
+
+## Operational Requirements
+- Ingestion pipeline:
+  - Canonical Markdown → chunking → embeddings → Qdrant
+  - Metadata stored in Neon or vector payloads
+- FastAPI endpoints:
+  - POST /query
+  - POST /admin/ingest
+  - GET /health
+- Prompt templates and agent rules must enforce citation and provenance.
+- CI/CD pipelines documented for frontend and backend.
+
+---
+
+## Additional Instructions for AI / Authoring Agents
+- Prioritize technical correctness over stylistic flair.
+- Do not infer beyond provided sources.
+- Always cite retrieved material in chatbot responses.
+- Follow the Spec-Kit workflow strictly: Constitution → Spec → Plan → Task → Implement.
+
+---
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution is the single source of truth for project standards and principles. All work must adhere to it. Amendments require team consensus and must be documented here.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 2.0.0 | **Ratified**: 2025-12-05 | **Last Amended**: 2025-12-06
