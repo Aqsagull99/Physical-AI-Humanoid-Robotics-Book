@@ -153,7 +153,7 @@ const Chatbot: React.FC = () => {
           <div className="chatkit-messages">
             {messages.length === 0 ? (
               <div className="chatkit-welcome">
-                <div className="chatkit-welcome-avatar">AI</div>
+                {/* <div className="chatkit-welcome-avatar">AI</div> */}
                 <div className="chatkit-welcome-content">
                   <h4>Physical AI & Robotics Assistant</h4>
                   <p>Hello! I'm your AI assistant for the Physical AI & Humanoid Robotics book.</p>
@@ -167,7 +167,7 @@ const Chatbot: React.FC = () => {
                   className={`chatkit-message ${message.sender}-message`}
                 >
                   {message.sender === 'bot' && (
-                    <div className="chatkit-avatar bot-avatar">AI</div>
+                    <div className="chatkit-avatar bot-avatar"></div>
                   )}
                   <div className="chatkit-bubble">
                     <div className="chatkit-message-text">
@@ -242,7 +242,7 @@ const Chatbot: React.FC = () => {
       ) : (
         <button className="chatkit-toggle" onClick={toggleChat}>
           <div className="chatkit-toggle-avatar">AI</div>
-          <span>Ask AI</span>
+          <span></span>
         </button>
       )}
     </div>

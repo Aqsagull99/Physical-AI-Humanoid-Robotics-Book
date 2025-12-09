@@ -1,60 +1,79 @@
 .footer {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 2rem 0;
-  border-top: 1px solid #333333;
+  background: linear-gradient(
+    135deg,
+    #fde4ee 0%,
+    #e6f6ec 100%
+  ) !important; /* extra-light pink → green */
+  color: #111827 !important;
+  padding: 4rem 0 2.5rem !important;
+  border-top: 1px solid rgba(209, 39, 113, 0.2) !important;
+  margin-top: auto !important;
 }
 
+/* Section spacing */
 .footerSection {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem !important;
 }
 
+/* Titles */
 .footerTitle {
-  color: #16a34a; /* dark green */
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
+  color: #111827 !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 1rem !important;
+  font-weight: 700 !important;
 }
 
+/* Description text */
 .footerDescription {
-  color: #cccccc;
-  line-height: 1.6;
-  margin-bottom: 0;
+  color: #4b5563 !important;
+  line-height: 1.8 !important;
+  font-size: 1.05rem !important;
 }
 
+/* List reset */
 .footerList {
-  list-style: none;
-  padding-left: 0;
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
 }
 
 .footerList li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem !important;
 }
 
+/* Links */
 .footerLink {
-  color: #ffffff !important;
-  text-decoration: none;
-  transition: color 0.2s ease;
+  color: #374151 !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
 }
 
 .footerLink:hover {
-  color: #93c5fd !important;
-  text-decoration: none;
+  color: #c81e6e !important; /* soft dark pink */
+  text-decoration: none !important;
 }
 
+/* Bottom area */
 .footerBottom {
-  padding-top: 1.5rem;
-  margin-top: 1.5rem;
-  border-top: 1px solid #333333;
+  margin-top: 2.5rem !important;
+  padding-top: 1.75rem !important;
+  border-top: 1px solid rgba(209, 39, 113, 0.2) !important;
+  text-align: center !important;
 }
 
+/* Copyright */
 .copyright {
-  color: #999999;
-  margin: 0;
+  color: #6b7280 !important;
+  font-size: 0.95rem !important;
+  margin: 0 !important;
 }
 
+/* Mobile spacing */
 @media (max-width: 996px) {
   .footerSection {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem !important;
   }
 }
+
+

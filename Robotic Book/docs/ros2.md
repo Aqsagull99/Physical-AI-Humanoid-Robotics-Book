@@ -27,3 +27,6 @@ By the end of this module, you will understand:
 - How to represent humanoid robots using URDF for simulation and control
 
 ROS 2 provides the essential infrastructure for building complex humanoid robots, enabling different components to communicate effectively while maintaining modularity and scalability. This forms the foundation for higher-level AI systems to control the robot's behavior.
+
+
+
