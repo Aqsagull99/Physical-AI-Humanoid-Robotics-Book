@@ -1,89 +1,149 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
+/* HERO SECTION */
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+  min-height: 90vh;
+  padding: 6rem 0;
   position: relative;
-  overflow: hidden;
-  background: #ffffff;
-  color: #000000;
-}
-
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-.buttons {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(
+    -45deg,
+    #f7c1d9,
+    #b7e4c7,
+    #f4a7c2,
+    #a0dfbf
+  );
+  background-size: 400% 400%;
+  animation: heroGradient 12s ease infinite;
 }
 
-/* Professional academic button styling */
-.button--secondary {
-  background-color: #2563eb !important;
+/* Gradient animation */
+@keyframes heroGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Content */
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.heroTitle {
+  font-size: 3.4rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.heroSubtitle {
+  font-size: 1.45rem;
+  color: #374151;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+/* Buttons container */
+.buttons {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* CTA Button */
+.readyBookButton {
+  background: linear-gradient(135deg, #c81e6e, #1f9c48) !important;
   color: #ffffff !important;
   border: none !important;
-  border-radius: 6px !important;
-  padding: 1rem 2rem !important;
-  font-size: 1.1rem !important;
-  font-weight: 500 !important;
-  transition: all 0.3s ease !important;
+  border-radius: 14px !important;
+  padding: 1.35rem 3rem !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  transition: all 0.35s ease !important;
+  box-shadow: 0 16px 40px rgba(200, 30, 110, 0.4) !important;
   text-decoration: none !important;
-  display: inline-block !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  flex-shrink: 0; /* prevent button size change */
 }
 
-.button--secondary:hover {
-  background-color: #1d4ed8 !important;
-  color: #ffffff !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-  text-decoration: none !important;
+/* Button hover */
+.readyBookButton:hover {
+  transform: translateY(-4px) scale(1.02) !important;
+  box-shadow: 0 22px 55px rgba(200, 30, 110, 0.5) !important;
+  background: linear-gradient(135deg, #aa185c, #187d39) !important;
 }
 
-.contentPreview {
-  padding: 4rem 0;
-  background-color: #ffffff;
-  color: #000000;
+/* Right-side image */
+.buttonBranderIconRight {
+  width: 250px; 
+  height: 250px;
+  margin-left: 6rem;
+  flex-shrink: 0; 
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  animation: floatIcon 3s ease-in-out infinite;
 }
 
-.previewCard {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 8px;
-  height: 100%;
-  border: 1px solid #e5e7eb;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+/* Hover animation */
+.buttonBranderIconRight:hover {
+  transform: scale(1.2) rotate(10deg);
+  opacity: 0.95;
 }
 
-.previewCard:hover {
-  transform: translateY(-5px);
-  border-color: #3b82f6;
+/* Floating animation */
+@keyframes floatIcon {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
-.previewCard h3 {
-  color: #000000;
-  margin-bottom: 1rem;
-}
-
-.previewCard p {
-  color: #000000;
-  line-height: 1.6;
-}
-
-@media screen and (max-width: 996px) {
-  .contentPreview {
-    padding: 2rem 0;
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .heroBanner {
+    padding: 4.5rem 1.75rem;
+    min-height: auto;
   }
 
-  .previewCard {
-    margin-bottom: 1.5rem;
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .buttonBranderIconRight {
+    width: 80px;  /* responsive medium size */
+    height: 80px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .buttonBranderIconRight {
+    width: 60px;  /* mobile-friendly */
+    height: 60px;
   }
 }

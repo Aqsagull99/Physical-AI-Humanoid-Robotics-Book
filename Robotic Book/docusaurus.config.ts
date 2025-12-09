@@ -96,49 +96,9 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark', // Keep dark for contrast with the new white theme
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Textbook',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'About',
-              to: '/about',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Book. Built with Docusaurus.`,
+      style: 'light', // Changed to light for better consistency with the new theme
+      links: [], // Empty links since we're using a custom footer component
+      copyright: ' ', // Space instead of empty to satisfy validation
     },
     prism: {
       theme: prismThemes.github,
@@ -148,3 +108,6 @@ const config: Config = {
 };
 
 export default config;
+
+
+

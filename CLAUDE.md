@@ -208,3 +208,10 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- React 18 + TypeScript + Framer Motion, Tailwind CSS, lucide-react (001-homepage-ui)
+- N/A (static content) (001-homepage-ui)
+
+## Recent Changes
+- 001-homepage-ui: Added React 18 + TypeScript + Framer Motion, Tailwind CSS, lucide-react

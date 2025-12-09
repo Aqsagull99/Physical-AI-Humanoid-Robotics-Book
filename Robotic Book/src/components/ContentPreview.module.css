@@ -1,40 +1,73 @@
+/* Section Background */
 .contentPreview {
-  padding: 4rem 0;
-  background-color: #ffffff;
-  color: #000000;
+  padding: 5rem 0;
+  background: linear-gradient(
+    135deg,
+    var(--soft-green) 0%,
+    var(--light-pink) 100%
+  );
+  color: #111827;
+  position: relative;
 }
 
+/* Card Base */
 .previewCard {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 16px;
   height: 100%;
-  border: 1px solid #e5e7eb;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(209, 39, 113, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Subtle gradient border effect */
+.previewCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, #d12771, #27a348);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.25;
+}
+
+/* Hover Effect */
 .previewCard:hover {
-  transform: translateY(-5px);
-  border-color: #3b82f6;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
 }
 
+/* Title */
 .cardTitle {
-  color: #000000;
-  margin-bottom: 1rem;
+  color: #111827;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
 }
 
+/* Description */
 .cardDescription {
-  color: #000000;
-  line-height: 1.6;
+  color: #374151;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
+/* Mobile Responsive */
 @media screen and (max-width: 996px) {
   .contentPreview {
-    padding: 2rem 0;
+    padding: 3rem 1.5rem;
   }
 
   .previewCard {
+    padding: 2rem;
     margin-bottom: 1.5rem;
   }
 }
