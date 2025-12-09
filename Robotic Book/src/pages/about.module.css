@@ -1,19 +1,23 @@
 .aboutSection {
   padding: 4rem 0;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+  background: linear-gradient(
+    135deg,
+    #f6fff9 0%,      /* very light green */
+    #fff0f6 100%     /* very light pink */
+  );
 }
 
 .aboutCard {
-  background: white;
-  border-radius: 12px;
+  background: #ffffff;
+  border-radius: 16px;
   padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   margin: 2rem 0;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #e6f2ec;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
 
 .sectionTitle {
-  color: #2c3e50;
+  color: #1e7f63;            /* primary green */
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
@@ -23,28 +27,39 @@
 .aboutText {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #34495e;
+  color: #444;
   margin-bottom: 1.5rem;
 }
 
 .featuresGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin: 2.5rem 0;
 }
 
 .featureItem {
-  background: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 8px;
-  border-left: 4px solid #3498db;
+  background: linear-gradient(
+    135deg,
+    #f1fdf7,
+    #fff5fa
+  );
+  padding: 1.6rem;
+  border-radius: 12px;
+  border-left: 4px solid #f06292;   /* pink accent */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureItem:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .featureItem h3 {
-  color: #2980b9;
+  color: #e84393;     /* pink heading */
   margin-top: 0;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .featureItem p {
@@ -52,6 +67,7 @@
   margin-bottom: 0;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .aboutCard {
     padding: 1.5rem;
