@@ -4,8 +4,8 @@ import styles from './about.module.css';
 
 function About() {
   return (
-    <Layout title="About" description="About the author and the Physical AI & Humanoid Robotics Book">
-      
+    <Layout>
+
       <section className={styles.aboutSection}>
         <div className="container">
           <div className="row">

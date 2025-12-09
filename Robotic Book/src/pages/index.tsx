@@ -53,15 +53,14 @@ export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <Layout
-      title={`Welcome to ${siteConfig.title}`}
-      description="Building Intelligent Humanoid Robots with ROS 2, NVIDIA Isaac, and VLA Systems"
-    >
+    <Layout>
       <HomepageHeader />
       <main>
         <ContentPreview />
-      <Footer/> 
+      <Footer/>
       </main>
     </Layout>
   );
 }
+
+
