@@ -1,8 +1,19 @@
-{
-  // This file is not used in compilation. It is here just for a nice editor experience.
+
+  {
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/@docusaurus/types/src",
+      "./node_modules/@docusaurus/module-type-aliases/src"
+    ]
   },
+  "include": [
+    "src",
+    "src/types",
+    "./node_modules/@docusaurus/module-type-aliases/src"
+  ],
   "exclude": [".docusaurus", "build"]
 }
+

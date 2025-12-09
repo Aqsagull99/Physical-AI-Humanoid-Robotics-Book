@@ -113,8 +113,7 @@ export default function Footer(): ReactNode {
         {/* Bottom */}
         <div className={styles.footerBottom}>
           <p className={styles.copyright}>
-            {siteConfig.themeConfig.footer?.copyright ??
-              `© ${new Date().getFullYear()} Physical AI & Humanoid Robotics Book. Built with Docusaurus.`}
+            {`© ${new Date().getFullYear()} Physical AI & Humanoid Robotics Book. Built with Docusaurus.`}
           </p>
         </div>
       </div>
