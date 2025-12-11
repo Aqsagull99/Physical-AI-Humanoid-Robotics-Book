@@ -1,0 +1,371 @@
+/**
+ * Custom CSS for Physical AI & Humanoid Robotics homepage
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Color palette as per spec requirements */
+:root {
+  --soft-green: #86efac; /* or #34d399 */
+  --light-pink: #fca5a5; /* or #f472b6 */
+  --accent-gradient-start: #ec4899; /* pink-500 */
+  --accent-gradient-end: #34d399; /* green-500 */
+  --gradient-stop-1: #ffffff; /* white */
+  --gradient-stop-2: #fdf2f8; /* pink-50 */
+  --gradient-stop-3: #f0fdf4; /* green-50 */
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-text-color: #000000;
+  --ifm-text-color-base: #000000;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-color-base: #000000;
+  --ifm-menu-color: #000000;
+  --ifm-menu-color-active: #3b82f6;
+  --ifm-menu-color-background-active: rgba(255, 255, 255, 0.2);
+  --ifm-footer-color: #ffffff;
+  --ifm-footer-background-color: #000000;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  --ifm-toc-border-color: #000000;
+  --ifm-global-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  /* Custom color hierarchy */
+  --ifm-color-dark-green: #16a34a; /* emerald-600 */
+  --ifm-color-dark-pink: #db2777;  /* pink-600 */
+}
+
+/* Homepage-specific styles for Physical AI & Humanoid Robotics */
+ body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+html {
+  background-color: #ffffff;
+} 
+
+/* Homepage component styles */
+.homepage-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Container wrapper with max-width and horizontal padding */
+.hero-content-wrapper, .section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Gradient text for "AI" and "Humanoid" words */
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent-gradient-start) 0%, var(--accent-gradient-end) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hero section styles */
+ .hero-section {
+  position: relative;
+  padding: 3rem 1rem;
+} 
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 5rem 1rem;
+  }
+}
+
+.hero-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+} 
+
+ @media (min-width: 768px) {
+ .hero-content-wrapper {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+  }
+} 
+
+.hero-image-container {
+  margin-bottom: 2.5rem;
+} 
+
+ @media (min-width: 768px) {
+.hero-image-container {
+    width: 50%;
+    margin-bottom: 0;
+    padding-right: 2.5rem;
+  }
+} 
+
+.hero-text-container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-text-container {
+    width: 50%;
+  }
+} */
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+} 
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 3.75rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  max-width: 32rem;
+}
+
+@media (min-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .cta-buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+.primary-button {
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, var(--accent-gradient-start) 0%, var(--accent-gradient-end) 100%);
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.primary-button:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: scale(1.05);
+}
+
+.secondary-button {
+  padding: 1rem 2rem;
+  border: 2px solid #1f2937;
+  color: #1f2937;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.secondary-button:hover {
+  background: #1f2937;
+  color: white;
+}
+
+/* Image styling */
+/* .hero-image {
+  width: 100%;
+  max-width: 32rem; /* equivalent to max-w-lg */
+  margin: 0 auto;
+  border-radius: 0.5rem; /* equivalent to rounded-lg */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* equivalent to shadow-xl */
+/* } */
+
+/* Floating orb styling */
+.floating-orb {
+  position: absolute;
+  top: -1.5rem; /* equivalent to -top-6 */
+  left: -1.5rem; /* equivalent to -left-6 */
+  width: 6rem; /* equivalent to w-24 */
+  height: 6rem; /* equivalent to h-24 */
+  border-radius: 50%; /* equivalent to rounded-full */
+  background: linear-gradient(90deg, #fca5a5, #34d399); /* equivalent to bg-gradient-to-r from-[#fca5a5] to-[#34d399] */
+  opacity: 0.3; /* equivalent to opacity-30 */
+  filter: blur(40px); /* equivalent to blur-xl */
+}
+
+/* Title word styling */
+.title-word {
+  display: inline-block;
+  margin-right: 0.5rem; /* equivalent to mr-2 */
+}
+
+/* Card content styling */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Feature cards styles */
+.feature-cards-section {
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, var(--soft-green) 0%, var(--light-pink) 100%);
+}
+
+.feature-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .feature-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature-card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-0.625rem);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.pink-card {
+  background-color: rgba(253, 242, 248, 0.8); /* pink-50 with transparency */
+}
+
+.green-card {
+  background-color: rgba(240, 253, 244, 0.8); /* green-50 with transparency */
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, var(--light-pink) 0%, var(--soft-green) 100%);
+}
+
+.feature-card-icon {
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.feature-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card-description {
+  color: #4b5563;
+}
+
+/* Footer styles - overridden by custom Footer component */
+/* The actual footer styling is handled in Footer.module.css */
+
+/* Dark mode */
+[data-theme='dark'] {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-background-color: #1f2937;
+  --ifm-background-surface-color: #1f2937;
+  --ifm-text-color: #f9fafb;
+  --ifm-text-color-base: #f9fafb;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  --ifm-font-color-base: #f9fafb;
+  --ifm-menu-color: #f9fafb;
+  --ifm-menu-color-active: #60a5fa;
+  --ifm-menu-color-background-active: rgba(0, 0, 0, 0.2);
+  --ifm-footer-color: #f9fafb;
+  --ifm-footer-background-color: #000000;
+  --ifm-navbar-background-color: rgba(31, 41, 55, 0.95); /* Slightly transparent for subtle effect */
+  --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  --ifm-toc-border-color: #f9fafb;
+  --ifm-global-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.1);
+  /* Custom color hierarchy */
+  --ifm-color-dark-green: #34d399; /* emerald-400 */
+  --ifm-color-dark-pink: #f472b6;  /* pink-400 */
+}
+
+/* Light mode */
+[data-theme='light'] {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-text-color: #000000;
+  --ifm-text-color-base: #000000;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-color-base: #000000;
+  --ifm-menu-color: #000000;
+  --ifm-menu-color-active: #3b82f6;
+  --ifm-menu-color-background-active: rgba(255, 255, 255, 0.2);
+  --ifm-footer-color: #ffffff;
+  --ifm-footer-background-color: #000000;
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent for subtle effect */
+  --ifm-navbar-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  --ifm-toc-border-color: #000000;
+  --ifm-global-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  /* Custom color hierarchy */
+  --ifm-color-dark-green: #16a34a; /* emerald-600 */
+  --ifm-color-dark-pink: #db2777;  /* pink-600 */
+}
+
+
+

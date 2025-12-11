@@ -1,0 +1,219 @@
+/* CHATKIT CONTAINER */
+.chatkit-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* TOGGLE BUTTON */
+.chatkit-toggle {
+  background: linear-gradient(135deg, #c81e6e 0%, #1f9c48 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(200, 30, 110, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.chatkit-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(200, 30, 110, 0.5);
+}
+
+/* CHAT WINDOW */
+.chatkit-window {
+  width: 400px;
+  height: 550px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+/* HEADER */
+.chatkit-header {
+  background: linear-gradient(135deg, #c81e6e 0%, #1f9c48 100%);
+  color: white;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatkit-header-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chatkit-ai-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.chatkit-header-info {
+  flex: 1;
+}
+
+.chatkit-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+.chatkit-status .status-dot.online {
+  background-color: #1f9c48;
+}
+
+/* CLOSE BUTTON */
+.chatkit-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.chatkit-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* MESSAGES AREA */
+.chatkit-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fffaf6; /* light, soft background */
+}
+
+/* BOT MESSAGE */
+.bot-message .chatkit-message-text {
+  background: #ffffff;
+  color: #374151;
+  border-radius: 18px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  max-width: 85%;
+  word-wrap: break-word;
+}
+
+/* USER MESSAGE */
+.user-message .chatkit-message-text {
+  background: #c81e6e; /* solid pink */
+  color: white;
+  border-radius: 18px;
+  padding: 12px 16px;
+  max-width: 85%;
+  word-wrap: break-word;
+}
+
+/* AVATARS */
+
+
+.user-avatar {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* INPUT FORM */
+.chatkit-input-form {
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.chatkit-input-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f9f5f7; /* soft light background */
+  border: 1px solid #d1d5db;
+  border-radius: 24px;
+  padding: 4px 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chatkit-input-container:focus-within {
+  border-color: #c81e6e;
+  box-shadow: 0 0 0 3px rgba(200,30,110,0.1);
+}
+
+.chatkit-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  min-height: 24px;
+}
+
+.chatkit-input::placeholder {
+  color: #9ca3af;
+}
+
+/* SEND BUTTON */
+.chatkit-send-button {
+  background: #c81e6e;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.chatkit-send-button:hover:not(:disabled) {
+  background: #1f9c48;
+}
+
+.chatkit-send-button:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chatkit-container {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .chatkit-window {
+    width: calc(100vw - 20px);
+    height: 500px;
+    max-width: 400px;
+  }
+}
