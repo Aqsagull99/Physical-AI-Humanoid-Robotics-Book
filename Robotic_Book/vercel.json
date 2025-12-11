@@ -22,7 +22,8 @@
   "env": {
     "USE_SIMPLE_CSS_MINIFIER": "true",
     "TURBOPACK": "false",
-    "NODE_OPTIONS": "--max-old-space-size=4096"
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "CSS_MINIFY": "false"
   },
   "github": {
     "silent": true
